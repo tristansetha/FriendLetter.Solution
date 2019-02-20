@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Create a Custom Postcard!</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  </head>
+  <body>
+    <h1>Fill in your name and your friend's name to create your custom postcard!</h1>
+    <form action="/postcard" method="post"> <!--Notice the <form> tag says action="/postcard". This tells ASP.NET Core MVC where to submit info provided through this form. This attribute must be set to the path (not name, but URL path!) of another route in our controller. (We will create a "/postcard" route in a moment.)-->
+     
+     <label for="sender">Sender's Name</label>
+     <input id="sender" name="sender" type="text">
+
+     <label for="recipient">Recipient's Name</label>
+     <input id="recipient" name="recipient" type="text"> <!-- <input>s must have 3 attributes set: name, id, and type. -->
+     
+     <label for="location">Location</label>
+     <input id="location" name="location" type="text"> 
+
+     <label for="souvenir">souvenir</label>
+     <input id="souvenir" name="souvenir" type="text"> 
+
+     <button type="submit">Go!</button>
+
+    </form>
+  </body>
+</html>
